@@ -1,0 +1,12 @@
+name: codeserver
+on:  
+  push:
+  pull_request:
+ 
+jobs:
+ building-1:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: build-codeserver
+      run: sudo bash codeserver.sh
